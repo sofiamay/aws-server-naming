@@ -41,7 +41,10 @@ def main():
             if not matches_regexes(word, suffixes):
                 server_names.append(word)
 
-    print(server_names[0:50])
+    with open('data/final_word_list.txt', 'w') as f:
+        for item in server_names:
+            f.write("%s\n" % item)
+
     return server_names
 
 
