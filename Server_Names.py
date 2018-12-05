@@ -3,7 +3,7 @@ import re
 nltk.download('stopwords')
 nltk.download('averaged_perceptron_tagger')
 from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer
+
 
 
 
@@ -19,24 +19,33 @@ def read_file(filename, func=None):
             array.append(line)
         return array
 
+# boolean: returns true if a word matches at least one regex in a list
+def matches_regexes(word, regexes):
+    for regex in regexes:
+        if regex.match(word):
+            return True
+    return False
+
 def main():
     #read file
     word_list = read_file("data/wordList")
-    suffixes = read_file("data/suffixes", lambda x: re.compile(r'\w*%s\b' % x))
-    test = re.compile(r'\w*ed\b')
-    print(suffixes[1].match('played'))
+    # generates a list of suffixes and their lengths. E.g. [ ['ing',3], ['ed',2],...]
+    suffixes = read_file("data/suffixes", lambda x: re.compile(r'\w*%s\b' % x) )
 
     # stem words and remove stopwords
     stop_words = set(stopwords.words("english"))
-    ps = PorterStemmer()
     server_names = []
 
     for word in word_list:
         if word not in stop_words:
-            if ps.stem(word) != word:
+            if not matches_regexes(word, suffixes):
                 server_names.append(word)
+
+    print(server_names[0:50])
     return server_names
 
 
 if __name__ == "__main__":
     main()
+
+# Demonology 
