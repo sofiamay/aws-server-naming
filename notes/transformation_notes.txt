@@ -1,0 +1,96 @@
+able
+habilable --> habile
+If the final consonant is preceded by a vowel, delete suffix, add an "e"
+If there already is an e, do nothing
+
+ed
+final two consonants are the same, then delete one of them
+hopped --> hop
+
+er
+final two consonants are the same, delete one:
+hopper --> hop
+single vowel before final consonant, delete only the "r" 
+worshipper --> worship
+
+
+es
+ends in vowel + consonant, remove the "s"
+housewares --> houseware
+ends in "ies," replace with "y"
+ends in "ves," replace with "f"
+else, remove "es"
+
+
+est
+iest --> y:
+happiest --> happy
+
+
+ification
+ignore word. Reduced forms are also in the word list
+
+ization
+ignore word
+All words with this suffix are either really long and obscure ore closely related to another word in the word list
+
+tional
+ignore word
+
+tioning
+ignore word
+
+
+ation
+ends in "iation" --> replace with "iate"
+ends in two consonants, delete "ation"
+ends in vowel+consonant, replace with "e"
+	if still not a word, see if just deleting "ation" makes a word
+
+tion
+"ation" --> "e" if not a word, ignore
+delete "ion" and if not a word ingore 
+
+
+fuly
+ignore word
+
+
+ify
+ignore word
+
+
+ian
+delete suffix
+if not a word, ignore
+
+ibleness 
+--> ible
+
+ic
+remove "if" (and if result sin't a word keep original)
+
+istic?
+ignore word (delete)
+
+
+ing
+ion
+ish
+ism
+ist
+ity
+ive
+ize
+less
+logy
+ly
+ment
+scent
+lent
+ness
+s
+ship
+y
+
+If word is in dictionary, add to set. Else add original word to set
