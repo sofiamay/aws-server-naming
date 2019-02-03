@@ -1,3 +1,4 @@
+
 able
 habilable --> habile
 If the final consonant is preceded by a vowel, delete suffix, add an "e"
@@ -74,12 +75,51 @@ istic?
 ignore word (delete)
 
 
+ingly
+ignore word
+
+ingery
+ignore word
+
+ingness
+ignore word
+
+string
+keep word
+
+ings
+ignore
+
 ing
-ion
+ends in consonant + vowel --> replace with "e." If not word, just remove "ing"
+ends in double consonant --> remove one consonant. If not word, then ignore
+
+ishly
+ignore word
+
+ishness
+ignore word
+
 ish
+remove ish
+
+
+
 ism
+ignore word
+
+
 ist
+change to "y." If not a word, delete suffix. If still not a word, continue (and add the full word)
+
+
+ability
+ignore
+
 ity
+
+
+
 ive
 ize
 less
