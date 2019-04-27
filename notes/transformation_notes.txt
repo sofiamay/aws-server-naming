@@ -9,10 +9,7 @@ final two consonants are the same, then delete one of them
 hopped --> hop
 
 er
-final two consonants are the same, delete one:
-hopper --> hop
-single vowel before final consonant, delete only the "r" 
-worshipper --> worship
+if root word is in list, return that word, else return full word
 
 
 es
@@ -84,9 +81,6 @@ ignore word
 ingness
 ignore word
 
-string
-keep word
-
 ings
 ignore
 
@@ -102,7 +96,6 @@ ignore word
 
 ish
 remove ish
-
 
 
 ism
@@ -133,4 +126,3 @@ s
 ship
 y
 
-If word is in dictionary, add to set. Else add original word to set
