@@ -132,8 +132,23 @@ def ness(word, server_names):
     return ""
 
 def ship(word, server_names):
-    # if root word is in list, return it. Esle add full word to list
+    # if root word is in list, return it. Else add full word to list
     if word[0:-4] in server_names:
         return word[0:-4]
     else:
         return word
+
+def like(word, server_names):
+	# remove suffix. If root is in list, return it. Else add full word
+	if word[0:-4] in server_names:
+		return word[0:-4]
+	else:
+		return word
+
+def less(word, server_names):
+	# remove suffix. If root is in list, return it. Else add full word
+	if word[0:-4] in server_names:
+		return word[0:-4]
+	else:
+		return word
+	
