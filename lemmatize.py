@@ -90,6 +90,10 @@ def ic(word, server_names):
     else:
         return word
 
+def ingly(word, server_names):
+	#ignore word
+	return ""
+
 def ing(word, server_names):
     # remove suffix
     return word[0:-3]
