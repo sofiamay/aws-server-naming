@@ -21,7 +21,16 @@ response = table.scan(Limit=1)
 server = response['Items'][0]
 
 # Assign the server name to the new server:
-server_name = json.dumps(response['Items'][0]["Name"])
+server_name = response['Items'][0]["Name"]
 print(server_name)
 
 #### ASSIGN TO SERVER HERE
+
+# delete the server name from the database
+
+
+deleted_item = table.delete_item(
+    Key={
+        'Name': server_name
+    }
+)
