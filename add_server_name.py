@@ -15,7 +15,7 @@ name = "test"
 
 response = table.put_item(
    Item={
-        'Namw': name,
+        'Name': name,
     }
 )
 
