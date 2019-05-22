@@ -1,6 +1,6 @@
 import boto3
 import json
-# Adds a name to the DynoDB table
+# Upon termination of an EC2 instance: a) get the name of the instance and b) delete that Name from the database
 ec2 = boto3.resource('ec2')
 dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 table = dynamodb.Table('ServerNames')

@@ -5,8 +5,17 @@ from botocore.exceptions import ClientError
 # ) retrieve a name from the database b) assign it to the new EC2 instance c) delete that name from the database
 
 client = boto3.client('ec2')
+ec2 = boto3.resource('ec2')
 dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 table = dynamodb.Table('ServerNames')
+
+# Helper function accepts an instance name and returns boolean: checks if instance contains a Name
+def has_name(instance_id):
+    instance = ec2.Instance(instance_id)
+    for tags in instance.tags:
+        if tags["Key"] == 'Name':
+            if tags["Value"]:
+                return True
 
 # a) retrieve a name from the database
 response = table.scan(Limit=1)   
